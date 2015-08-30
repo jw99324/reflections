@@ -1,0 +1,11 @@
+[color]
+	ui = auto
+[core]
+	editor = subl -n -w
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[user]
+	name = Jesi Weed
+	email = jweed@elon.edu
