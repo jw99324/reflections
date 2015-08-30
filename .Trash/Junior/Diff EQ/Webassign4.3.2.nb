@@ -1,0 +1,104 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2526,         94]
+NotebookOptionsPosition[      2129,         75]
+NotebookOutlinePosition[      2487,         91]
+CellTagsIndexPosition[      2444,         88]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Jessica Weed", "Title",
+ CellChangeTimes->{{3.637526598262414*^9, 3.6375266004133663`*^9}}],
+
+Cell[TextData[{
+ "Find the general solution of the given second-order differential equation.\n\
+\n6y\[CloseCurlyQuote]\[CloseCurlyQuote] + y\[CloseCurlyQuote] = 0\n\nThe \
+characteristic equation is:\n\n",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"6", 
+      SuperscriptBox["m", "2"]}], "+", " ", "m"}], " ", "=", " ", "0"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{"m", "(", 
+    RowBox[{
+     RowBox[{"6", "m"}], "+", "1"}], ")"}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"m", "=", "0"}], ",", " ", 
+    RowBox[{"m", "=", 
+     FractionBox[
+      RowBox[{"-", "1"}], "6"]}]}], TraditionalForm]}],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6375266065812902`*^9, 3.637526700982481*^9}}],
+
+Cell[BoxData[
+ RowBox[{"y", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"c1", " ", 
+    SuperscriptBox["E", 
+     RowBox[{"0", "x"}]]}], "+", " ", 
+   RowBox[{"c2", " ", 
+    SuperscriptBox["E", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "1"}], "6"], "x"}]]}]}]}]], "Input",
+ CellChangeTimes->{{3.637526709158258*^9, 3.6375267341976223`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"y", "=", " ", 
+  RowBox[{"c1", " ", "+", " ", 
+   RowBox[{"c2", " ", 
+    SuperscriptBox["E", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "1"}], "6"], "x"}]]}]}]}]], "Input",
+ CellChangeTimes->{{3.637526737389161*^9, 3.6375267433365583`*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 651},
+WindowMargins->{{169, Automatic}, {45, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 97, 1, 92, "Title"],
+Cell[680, 25, 804, 24, 191, "Text"],
+Cell[1487, 51, 347, 11, 39, "Input"],
+Cell[1837, 64, 276, 8, 39, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

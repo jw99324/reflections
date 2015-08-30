@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Examples of Symmetries of Polynomial Roots}{4}{0}{1}
+\beamer@sectionintoc {2}{Intro to p-adic Numbers}{10}{0}{2}
+\beamer@sectionintoc {3}{My Research of Degree 15 Polynomials}{13}{0}{3}

@@ -1,0 +1,1420 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     39527,       1411]
+NotebookOptionsPosition[     37095,       1323]
+NotebookOutlinePosition[     37484,       1340]
+CellTagsIndexPosition[     37441,       1337]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Using Laplace Transforms to Solve Ordinary Differential Equations\
+\>", "Title",
+ CellChangeTimes->{{3.638103841524312*^9, 3.6381038966338615`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Transforms of derivatives", "Section",
+ CellChangeTimes->{{3.6381039263216286`*^9, 3.6381039301102786`*^9}, 
+   3.6381040730962987`*^9, 3.638104356022208*^9}],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", ",", " ", 
+    RowBox[{"f", "'"}], ",", " ", "...", " ", ",", " ", 
+    SuperscriptBox["f", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}]]}], TraditionalForm]]],
+ " are continous on [0,\[Infinity]) and are of exponential order & if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"(", "n", ")"}]], "(", "t", ")"}], TraditionalForm]]],
+ " is piecewise continuous on [0,\[Infinity]), then\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[ScriptCapitalL]", 
+    RowBox[{"{", 
+     RowBox[{
+      SuperscriptBox["f", 
+       RowBox[{"(", "n", ")"}]], "(", "t", ")"}], "}"}]}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["s", "n"], 
+     RowBox[{"F", "(", "s", ")"}]}], " ", "-", " ", 
+    RowBox[{
+     SuperscriptBox["s", 
+      RowBox[{"n", "-", "1"}]], 
+     RowBox[{"f", "(", "0", ")"}]}], " ", "-", " ", 
+    RowBox[{
+     SuperscriptBox["s", 
+      RowBox[{"n", "-", "2"}]], 
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]]],
+ " - ... - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}]], "(", "0", ")"}], TraditionalForm]]],
+ "\n\nTake the LP of both sides. LP of y - initial value problem\n\nwhere ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"F", "(", "s", ")"}], "=", 
+    RowBox[{"\[ScriptCapitalL]", 
+     RowBox[{"{", 
+      RowBox[{"f", "(", "t", ")"}], "}"}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381139377695007`*^9, 3.638113944809128*^9}, {3.6381140102934732`*^9, 
+  3.638114012935585*^9}, {3.6386187734869847`*^9, 3.638618774034258*^9}, {
+  3.638871065858815*^9, 3.638871079578926*^9}},
+ FontSize->18]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solving IVPs using the Laplace Transform", "Section",
+ CellChangeTimes->{{3.638104423333293*^9, 3.638104433527424*^9}}],
+
+Cell["\<\
+(1) Take Laplace Transform of both sides of equation.  
+\t(ODE \[RightArrow] algebraic equation.)
+(2) Solve for Y(s).
+(3) Find the inverse Laplace Transform of Y(s). 
+\t(Algebraic solution\[RightArrow]ODE solution.)
+\
+\>", "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381044767696724`*^9, 3.63810460193923*^9}},
+ FontSize->18]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Examples/Practice", "Section",
+ CellChangeTimes->{{3.638106187231067*^9, 3.638106190258185*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Example #1: p.289, #40", "Subsection",
+ CellChangeTimes->{{3.6381136321251802`*^9, 3.638113647455435*^9}, {
+  3.638113728002821*^9, 3.638113730796054*^9}, {3.638114284990148*^9, 
+  3.6381142864221497`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "''"}], "+", 
+     RowBox[{"9", "y"}]}], "=", 
+    SuperscriptBox["e", "t"]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", "0"}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "'"}], 
+     RowBox[{"(", "0", ")"}]}], "=", "0"}], TraditionalForm]]],
+ "\n\nSolve the above IVP using the Laplace Transform.\n"
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+  3.6381137637594037`*^9}},
+ FontSize->18],
+
+Cell[TextData[{
+ "We start by applying the Laplace Transform to both sides of the equation:\n\
+\n\[ScriptCapitalL]{",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"y", "''"}], "+", 
+      RowBox[{"9", "y"}]}], "}"}], "=", 
+    RowBox[{"\[ScriptCapitalL]", 
+     RowBox[{"{", 
+      SuperscriptBox["e", "t"], "}"}]}]}], TraditionalForm]]],
+ "\n\nWe know that the transform is a linear operator:\n\n\[ScriptCapitalL]{",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"y", "''"}], "}"}], "+", 
+     RowBox[{"9", "\[ScriptCapitalL]", 
+      RowBox[{"{", "y", "}"}]}]}], "=", 
+    RowBox[{"\[ScriptCapitalL]", 
+     RowBox[{"{", 
+      SuperscriptBox["e", "t"], "}"}]}]}], TraditionalForm]]],
+ "\n\nNow we can use what we know about the Laplace Transform of derivatives:\
+\n\n\[ScriptCapitalL]{",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "''"}], "}"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["s", "2"], 
+      RowBox[{"Y", "(", "s", ")"}]}], "-", 
+     RowBox[{"s", " ", 
+      RowBox[{"y", "(", "0", ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"y", "'"}], 
+      RowBox[{"(", "0", ")"}]}]}]}], TraditionalForm]]],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"9", "\[ScriptCapitalL]", 
+     RowBox[{"{", "y", "}"}]}], "=", 
+    RowBox[{"9", 
+     RowBox[{"Y", "(", "s", ")"}]}]}], TraditionalForm]]],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[ScriptCapitalL]", 
+     RowBox[{"{", 
+      SuperscriptBox["e", "t"], "}"}]}], "=", 
+    FractionBox["1", 
+     RowBox[{"s", "-", "1"}]]}], TraditionalForm]]],
+ "\n\nand the entire equation becomes\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["s", "2"], 
+     RowBox[{"Y", "(", "s", ")"}]}], "-", 
+    RowBox[{"s", " ", 
+     RowBox[{"y", "(", "0", ")"}]}], "-", 
+    RowBox[{
+     RowBox[{"y", "'"}], 
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]]],
+ "+9Y(s)=",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"s", "-", "1"}]], TraditionalForm]]],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+  3.6381139256147842`*^9}, {3.6381140323150764`*^9, 3.6381140756316996`*^9}, {
+  3.6381141351943645`*^9, 3.6381142725504465`*^9}},
+ FontSize->18],
+
+Cell[TextData[{
+ "(a) Solve for ",
+ Cell[BoxData[
+  FormBox["Y", TraditionalForm]]],
+ "(s).  This is the Laplace Transform of y(t)."
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+   3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+   3.6381139256147842`*^9}, {3.6381140323150764`*^9, 
+   3.6381140756316996`*^9}, {3.6381141351943645`*^9, 3.638114335488472*^9}, 
+   3.638871381700432*^9},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["s", "2"], " ", 
+      RowBox[{"Y", "[", "s", "]"}]}], " ", "+", " ", 
+     RowBox[{"9", " ", 
+      RowBox[{"Y", "[", "s", "]"}]}]}], "\[Equal]", 
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{"s", "-", "1"}], ")"}]}]}], ",", 
+   RowBox[{"Y", "[", "s", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.638871384618676*^9, 3.638871456839315*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Y", "[", "s", "]"}], "\[Rule]", 
+    FractionBox["1", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "s"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"9", "+", 
+        SuperscriptBox["s", "2"]}], ")"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.638871457943231*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "(b) We want to take the Inverse Laplace Transform of the function of ",
+ Cell[BoxData[
+  FormBox["s", TraditionalForm]]],
+ " you found in (a) to get the solution ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "(", "t", ")"}], TraditionalForm]]],
+ ", but the form probably does not fit the forms on our list.  Use the \
+function Apart[ ] (see ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s Documentation Center) to find the partial fraction \
+decomposition of your answer to (a)."
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+   3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+   3.6381139256147842`*^9}, {3.6381140323150764`*^9, 
+   3.6381140756316996`*^9}, {3.6381141351943645`*^9, 3.638114335488472*^9}, {
+   3.638114380725116*^9, 3.6381145279981346`*^9}, 3.638871478022956*^9},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Apart", "[", 
+  RowBox[{"1", "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "s"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"9", "+", 
+       SuperscriptBox["s", "2"]}], ")"}]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.638871528252136*^9, 3.638871548280354*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"10", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"-", "1"}], "-", "s"}], 
+   RowBox[{"10", " ", 
+    RowBox[{"(", 
+     RowBox[{"9", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.6388715486760406`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "(c) In a text box, type out your work taking the Inverse Laplace Transform \
+of your answer to (b).\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ScriptCapitalL]", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "{",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"10", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", "1"}], "-", "s"}], 
+    RowBox[{"10", " ", 
+     RowBox[{"(", 
+      RowBox[{"9", "+", 
+       SuperscriptBox["s", "2"]}], ")"}]}]]}]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"10", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "} + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{
+    RowBox[{"-", "1"}], "-", "s"}], 
+   RowBox[{"10", " ", 
+    RowBox[{"(", 
+     RowBox[{"9", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"10", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "} +",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"-", "1"}], 
+   RowBox[{"10", " ", 
+    RowBox[{"(", 
+     RowBox[{"9", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "} - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"10", " ", 
+    RowBox[{"(", 
+     RowBox[{"9", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "10"], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"(", 
+    RowBox[{"s", "-", "1"}], ")"}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "} ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "10"]}], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], 
+    RowBox[{"{", 
+     FractionBox["1", 
+      RowBox[{"(", 
+       RowBox[{"9", "+", 
+        SuperscriptBox["s", "2"]}], ")"}]], "}"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "10"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"(", 
+    RowBox[{"9", "+", 
+     SuperscriptBox["s", "2"]}], ")"}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "10"], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"(", 
+    RowBox[{"s", "-", "1"}], ")"}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "} ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "30"]}], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], 
+    RowBox[{"{", 
+     FractionBox["3", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["3", "2"], "+", 
+        SuperscriptBox["s", "2"]}], ")"}]], "}"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "10"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox["3", "2"], "+", 
+     SuperscriptBox["s", "2"]}], ")"}]]],
+  CellChangeTimes->{3.6388715486760406`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "10"], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["e", "t"], "-", 
+      RowBox[{
+       FractionBox["1", "3"], 
+       RowBox[{"sin", "(", 
+        RowBox[{"3", "t"}], ")"}]}], " ", "-", 
+      RowBox[{"cos", "(", 
+       RowBox[{"3", "t"}], ")"}], " "}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+  3.6381139256147842`*^9}, {3.6381140323150764`*^9, 3.6381140756316996`*^9}, {
+  3.6381141351943645`*^9, 3.638114335488472*^9}, {3.638114380725116*^9, 
+  3.6381145279981346`*^9}, {3.638114592198043*^9, 3.638114667251544*^9}, {
+  3.638871602371372*^9, 3.638871647898664*^9}, {3.638871711349461*^9, 
+  3.638872064552384*^9}, {3.6388720951175222`*^9, 3.638872165099684*^9}},
+ FontSize->18],
+
+Cell[TextData[{
+ "(d) Your answer to (c) is the solution to the IVP.  Use DSolve to check \
+your answer.\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["s", "2"], 
+     RowBox[{"Y", "(", "s", ")"}]}], "-", 
+    RowBox[{"s", " ", 
+     RowBox[{"y", "(", "0", ")"}]}], "-", 
+    RowBox[{
+     RowBox[{"y", "'"}], 
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]]],
+ "+9Y(s)=",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"s", "-", "1"}]], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+   3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+   3.6381139256147842`*^9}, {3.6381140323150764`*^9, 
+   3.6381140756316996`*^9}, {3.6381141351943645`*^9, 3.638114335488472*^9}, {
+   3.638114380725116*^9, 3.6381145279981346`*^9}, {3.638114592198043*^9, 
+   3.638114667251544*^9}, {3.638115136347681*^9, 3.638115193884929*^9}, 
+   3.6388721741852007`*^9, {3.638872209105898*^9, 3.638872209569953*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "''"}], "[", "t", "]"}], "+", 
+       RowBox[{"9", 
+        RowBox[{"y", "[", "t", "]"}]}]}], "\[Equal]", 
+      SuperscriptBox["E", "t"]}], ",", 
+     RowBox[{
+      RowBox[{"y", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", 
+   RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.638872336934328*^9, 3.638872402179982*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "30"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "3"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"3", " ", "t"}], "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", "t"], " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", 
+          RowBox[{"3", " ", "t"}], "]"}], "2"]}], "-", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"3", " ", "t"}], "]"}], "+", 
+       RowBox[{"3", " ", 
+        SuperscriptBox["\[ExponentialE]", "t"], " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          RowBox[{"3", " ", "t"}], "]"}], "2"]}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.638872403212721*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   FractionBox["1", "30"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "3"}], " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"3", " ", "t"}], "]"}]}], "+", 
+     RowBox[{"3", " ", 
+      SuperscriptBox["\[ExponentialE]", "t"], " ", 
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        RowBox[{"3", " ", "t"}], "]"}], "2"]}], "-", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"3", " ", "t"}], "]"}], "+", 
+     RowBox[{"3", " ", 
+      SuperscriptBox["\[ExponentialE]", "t"], " ", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        RowBox[{"3", " ", "t"}], "]"}], "2"]}]}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.638872408918338*^9, 3.638872420909142*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "30"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"3", " ", 
+     SuperscriptBox["\[ExponentialE]", "t"]}], "-", 
+    RowBox[{"3", " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"3", " ", "t"}], "]"}]}], "-", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"3", " ", "t"}], "]"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.638872422010714*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Example #2: p.289, #36", "Subsection",
+ CellChangeTimes->{{3.6381136321251802`*^9, 3.638113647455435*^9}, {
+  3.638113728002821*^9, 3.638113730796054*^9}, {3.638114284990148*^9, 
+  3.6381142864221497`*^9}, {3.638115287372325*^9, 3.6381153010388846`*^9}, {
+  3.638521375681935*^9, 3.63852137760247*^9}, {3.638522058126051*^9, 
+  3.6385220591424723`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "'"}], "-", "y"}], "=", 
+    RowBox[{"2", 
+     RowBox[{"cos", "(", 
+      RowBox[{"5", "t"}], ")"}]}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", "0"}], TraditionalForm]]],
+ "\n\nSolve the above IVP using the Laplace Transform.\n\n\[ScriptCapitalL]{y\
+\[CloseCurlyQuote]-y} = \[ScriptCapitalL]{2 cos(5t)}\n\[ScriptCapitalL]{y\
+\[CloseCurlyQuote]} - \[ScriptCapitalL]{y} = \[ScriptCapitalL]{2 cos(5t)}\ns \
+Y(s)-y(0) - Y(s) =  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"2", "s"}], 
+    RowBox[{
+     SuperscriptBox["s", "2"], "+", "25"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+  3.6381137637594037`*^9}, {3.6385213986973324`*^9, 3.6385214144058895`*^9}, {
+  3.6385214488934574`*^9, 3.638521449414874*^9}, {3.638873294275217*^9, 
+  3.6388733729972*^9}, {3.6388734189900713`*^9, 3.638873557959853*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"s", " ", 
+      RowBox[{"Y", "[", "s", "]"}]}], " ", "-", " ", 
+     RowBox[{"Y", "[", "s", "]"}]}], " ", "\[Equal]", " ", 
+    FractionBox[
+     RowBox[{"2", "s"}], 
+     RowBox[{
+      SuperscriptBox["s", "2"], "+", "25"}]]}], ",", 
+   RowBox[{"Y", "[", "s", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6388735414635963`*^9, 3.6388735830713387`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Y", "[", "s", "]"}], "\[Rule]", 
+    FractionBox[
+     RowBox[{"2", " ", "s"}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "s"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"25", "+", 
+        SuperscriptBox["s", "2"]}], ")"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.638873583402627*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Apart", "[", 
+  FractionBox[
+   RowBox[{"2", " ", "s"}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]], "]"}]], "Input",
+ CellChangeTimes->{{3.6388735910423937`*^9, 3.638873598187324*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+  FractionBox[
+   RowBox[{"25", "-", "s"}], 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.6388735984559383`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Y[s] = ",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"13", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+   FractionBox[
+    RowBox[{"25", "-", "s"}], 
+    RowBox[{"13", " ", 
+     RowBox[{"(", 
+      RowBox[{"25", "+", 
+       SuperscriptBox["s", "2"]}], ")"}]}]]}]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "\nY[s] = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "13"], 
+    RowBox[{"(", 
+     FractionBox["1", 
+      RowBox[{"s", "-", "1"}]], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FractionBox["25", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "-",
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "\nY[s] = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "13"], 
+    RowBox[{"(", 
+     FractionBox["1", 
+      RowBox[{"s", "-", "1"}]], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["5", "13"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["5", 
+   RowBox[{"(", 
+    RowBox[{"25", "+", 
+     SuperscriptBox["s", "2"]}], ")"}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "- ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "13"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"(", 
+    RowBox[{"25", "+", 
+     SuperscriptBox["s", "2"]}], ")"}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.639130789235262*^9, 3.639130796157296*^9}, {
+  3.6391309577757797`*^9, 3.63913106390889*^9}}],
+
+Cell[TextData[{
+ "\[ScriptCapitalL]{Y[s]} = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"13", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+   FractionBox[
+    RowBox[{"25", "-", "s"}], 
+    RowBox[{"13", " ", 
+     RowBox[{"(", 
+      RowBox[{"25", "+", 
+       SuperscriptBox["s", "2"]}], ")"}]}]]}]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "}\nY[t] = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ScriptCapitalL]", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ "{",
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "} + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"25", "-", "s"}], 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "13"], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], 
+    RowBox[{"{", 
+     FractionBox["1", 
+      RowBox[{"s", "-", "1"}]], "}"}]}], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox["25", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "} - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]]],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.6388735984559383`*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "13"], 
+     SuperscriptBox["e", "t"]}], "+", " ", 
+    FractionBox["5", "13"]}], TraditionalForm]]],
+ "sin(5t) - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "13"], 
+    RowBox[{"cos", "(", 
+     RowBox[{"5", "t"}], ")"}]}], TraditionalForm]]],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "'"}], "-", "y"}], "=", 
+    RowBox[{"2", 
+     RowBox[{"cos", "(", 
+      RowBox[{"5", "t"}], ")"}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.638873609491021*^9, 3.6388737597387123`*^9}, {
+  3.6388737918688097`*^9, 3.638873825271297*^9}, {3.638873879637931*^9, 
+  3.6388738805400887`*^9}, {3.639130819569265*^9, 3.6391308377532873`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "'"}], "[", "t", "]"}], " ", "-", " ", 
+       RowBox[{"y", "[", "t", "]"}]}], " ", "\[Equal]", " ", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", "t"}], "]"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"y", "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", 
+   RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.638873827416325*^9, 3.638873861591268*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "13"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "t"], "-", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "t"}], "]"}], "+", 
+       RowBox[{"5", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"5", " ", "t"}], "]"}]}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.638873863098837*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Example #3: p.289, #36, slightly changed", "Subsection",
+ CellChangeTimes->{{3.6381136321251802`*^9, 3.638113647455435*^9}, {
+  3.638113728002821*^9, 3.638113730796054*^9}, {3.638114284990148*^9, 
+  3.6381142864221497`*^9}, {3.638115287372325*^9, 3.6381153010388846`*^9}, {
+  3.638521375681935*^9, 3.63852137760247*^9}, {3.638522049352786*^9, 
+  3.6385220710170736`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "'"}], "-", "y"}], "=", 
+    RowBox[{"2", 
+     RowBox[{"cos", "(", 
+      RowBox[{"5", "t"}], ")"}]}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", "1"}], TraditionalForm]]],
+ "\n\nSolve the above IVP using the Laplace Transform.\n\n\[ScriptCapitalL]{y\
+\[CloseCurlyQuote]-y} = \[ScriptCapitalL]{2 cos(5t)}\n\[ScriptCapitalL]{y\
+\[CloseCurlyQuote]} - \[ScriptCapitalL]{y} = \[ScriptCapitalL]{2 cos(5t)}\ns \
+Y(s)-y(0) - Y(s) =  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"2", "s"}], 
+    RowBox[{
+     SuperscriptBox["s", "2"], "+", "25"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\ns Y(s)- 1 - Y(s) =  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"2", "s"}], 
+    RowBox[{
+     SuperscriptBox["s", "2"], "+", "25"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.6381041167938657`*^9, 3.6381043442920027`*^9}, {
+  3.6381044767696724`*^9, 3.63810460193923*^9}, {3.638113676374552*^9, 
+  3.6381137637594037`*^9}, {3.6385213986973324`*^9, 3.6385214144058895`*^9}, {
+  3.6385214488934574`*^9, 3.638521449414874*^9}, {3.6385220732632136`*^9, 
+  3.6385220751178064`*^9}, {3.6388739490523777`*^9, 3.6388739668668127`*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"s", " ", 
+      RowBox[{"Y", "[", "s", "]"}]}], " ", "-", " ", "1", "-", " ", 
+     RowBox[{"Y", "[", "s", "]"}]}], " ", "\[Equal]", " ", 
+    FractionBox[
+     RowBox[{"2", "s"}], 
+     RowBox[{
+      SuperscriptBox["s", "2"], "+", "25"}]]}], ",", 
+   RowBox[{"Y", "[", "s", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.638873972364182*^9, 3.638873972906925*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Y", "[", "s", "]"}], "\[Rule]", 
+    FractionBox[
+     RowBox[{"25", "+", 
+      RowBox[{"2", " ", "s"}], "+", 
+      SuperscriptBox["s", "2"]}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "s"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"25", "+", 
+        SuperscriptBox["s", "2"]}], ")"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6388739767054462`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Apart", "[", 
+  FractionBox[
+   RowBox[{"25", "+", 
+    RowBox[{"2", " ", "s"}], "+", 
+    SuperscriptBox["s", "2"]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]], "]"}]], "Input",
+ CellChangeTimes->{{3.638873982805387*^9, 3.638873990612996*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["14", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+  FractionBox[
+   RowBox[{"25", "-", "s"}], 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{3.638874013755949*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["14", 
+    RowBox[{"13", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "s"}], ")"}]}]], "+", 
+   FractionBox[
+    RowBox[{"25", "-", "s"}], 
+    RowBox[{"13", " ", 
+     RowBox[{"(", 
+      RowBox[{"25", "+", 
+       SuperscriptBox["s", "2"]}], ")"}]}]]}]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["14", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "s"}], ")"}]}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "} + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"25", "-", "s"}], 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["14", "13"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"s", "-", "1"}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "} + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["25", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "} - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{"25", "+", 
+      SuperscriptBox["s", "2"]}], ")"}]}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["14", "13"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["1", 
+   RowBox[{"s", "-", "1"}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "} + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["5", "13"], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["5", 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox["5", "2"], "+", 
+     SuperscriptBox["s", "2"]}], ")"}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "} - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "13"], 
+    SuperscriptBox["\[ScriptCapitalL]", 
+     RowBox[{"-", "1"}]], "{"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FractionBox["s", 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox["5", "2"], "+", 
+     SuperscriptBox["s", "2"]}], ")"}]]],
+  CellChangeTimes->{3.638874013755949*^9}],
+ "}\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox["14", "13"], 
+     SuperscriptBox["e", "t"]}], "+", " ", 
+    RowBox[{
+     FractionBox["5", "13"], 
+     RowBox[{"sin", "(", 
+      RowBox[{"5", "t"}], ")"}]}], " ", "-", " ", 
+    RowBox[{
+     FractionBox["1", "13"], 
+     RowBox[{"cos", "(", 
+      RowBox[{"5", "t"}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.638874035217456*^9, 3.638874276608955*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "'"}], "[", "t", "]"}], " ", "-", " ", 
+       RowBox[{"y", "[", "t", "]"}]}], " ", "\[Equal]", " ", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", "t"}], "]"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"y", "[", "0", "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+   RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.63887427918853*^9, 3.638874302683413*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "13"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"14", " ", 
+        SuperscriptBox["\[ExponentialE]", "t"]}], "-", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"5", " ", "t"}], "]"}], "+", 
+       RowBox[{"5", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"5", " ", "t"}], "]"}]}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.638874303660825*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1067, 844},
+WindowMargins->{{56, Automatic}, {19, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 158, 3, 183, "Title"],
+Cell[CellGroupData[{
+Cell[762, 29, 164, 2, 80, "Section"],
+Cell[929, 33, 1860, 59, 262, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2826, 97, 125, 1, 80, "Section"],
+Cell[2954, 100, 375, 10, 192, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3366, 115, 102, 1, 80, "Section"],
+Cell[CellGroupData[{
+Cell[3493, 120, 212, 3, 54, "Subsection"],
+Cell[3708, 125, 698, 25, 190, "Text"],
+Cell[4409, 152, 2395, 81, 641, "Text"],
+Cell[6807, 235, 460, 11, 44, "Text"],
+Cell[CellGroupData[{
+Cell[7292, 250, 464, 14, 42, "Input"],
+Cell[7759, 266, 388, 13, 64, "Output"]
+}, Open  ]],
+Cell[8162, 282, 898, 20, 136, "Text"],
+Cell[CellGroupData[{
+Cell[9085, 306, 354, 11, 42, "Input"],
+Cell[9442, 319, 382, 14, 64, "Output"]
+}, Open  ]],
+Cell[9839, 336, 5631, 206, 359, "Text"],
+Cell[15473, 544, 1025, 27, 114, "Text"],
+Cell[CellGroupData[{
+Cell[16523, 575, 602, 18, 41, "Input"],
+Cell[17128, 595, 843, 26, 56, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18008, 626, 752, 22, 60, "Input"],
+Cell[18763, 650, 380, 12, 56, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19192, 668, 359, 5, 54, "Subsection"],
+Cell[19554, 675, 1148, 31, 263, "Text"],
+Cell[CellGroupData[{
+Cell[20727, 710, 444, 13, 60, "Input"],
+Cell[21174, 725, 415, 14, 64, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21626, 744, 348, 11, 66, "Input"],
+Cell[21977, 757, 364, 13, 64, "Output"]
+}, Open  ]],
+Cell[22356, 773, 1917, 75, 158, "Text"],
+Cell[24276, 850, 2911, 111, 213, "Text"],
+Cell[CellGroupData[{
+Cell[27212, 965, 562, 16, 36, "Input"],
+Cell[27777, 983, 492, 16, 56, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28318, 1005, 377, 5, 54, "Subsection"],
+Cell[28698, 1012, 1368, 40, 335, "Text"],
+Cell[CellGroupData[{
+Cell[30091, 1056, 455, 13, 60, "Input"],
+Cell[30549, 1071, 483, 16, 67, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31069, 1092, 408, 13, 69, "Input"],
+Cell[31480, 1107, 363, 13, 64, "Output"]
+}, Open  ]],
+Cell[31858, 1123, 4074, 155, 202, "Text"],
+Cell[CellGroupData[{
+Cell[35957, 1282, 561, 16, 36, "Input"],
+Cell[36521, 1300, 522, 17, 56, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

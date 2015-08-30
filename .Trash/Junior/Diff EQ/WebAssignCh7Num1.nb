@@ -1,0 +1,314 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8243,        305]
+NotebookOptionsPosition[      7516,        274]
+NotebookOutlinePosition[      7872,        290]
+CellTagsIndexPosition[      7829,        287]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Jessica Weed", "Title",
+ CellChangeTimes->{{3.638886828360497*^9, 3.638886829714422*^9}}],
+
+Cell[TextData[{
+ "Problem 1:\n\nDEFINITION 7.1.1 \[NonBreakingSpace]\[NonBreakingSpace] \
+Laplace Transform\nLet f be a function defined for t \[GreaterEqual] 0. Then \
+the integral\n\[ScriptCapitalL]{ f (t) } =\[NonBreakingSpace]",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+    RowBox[{
+     SuperscriptBox["e", 
+      RowBox[{"-", "st"}]], 
+     RowBox[{"f", "(", "t", ")"}], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nis said to be the Laplace transform of f, provided that the integral \
+converges.\n\nFind \[ScriptCapitalL] { f(t) }.\n\n\t\tt, 0 \[LessEqual] t < 1\
+\n\tf(t) = \t1,      t \[GreaterEqual] 1\n\t\n\[ScriptCapitalL]{ f(t) } = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], 
+    RowBox[{"t", " ", 
+     SuperscriptBox["e", 
+      RowBox[{"-", "st"}]], "dt"}]}], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "1", "\[Infinity]"], 
+    RowBox[{
+     SuperscriptBox["e", 
+      RowBox[{"-", "st"}]], "dt"}]}], TraditionalForm]]],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.638886834370605*^9, 3.6388872345281963`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"t", " ", 
+    SuperscriptBox["E", 
+     RowBox[{
+      RowBox[{"-", "s"}], " ", "t"}]]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.638887244542207*^9, 3.638887301025968*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"1", "-", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "s"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", "s"}], ")"}]}]}], 
+  SuperscriptBox["s", "2"]]], "Output",
+ CellChangeTimes->{3.638887322633052*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"t", " ", 
+    SuperscriptBox["E", 
+     RowBox[{
+      RowBox[{"-", "s"}], " ", "t"}]]}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6388890760206327`*^9, 3.638889088259163*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "s"}], " ", "t"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"s", " ", "t"}]}], ")"}]}], 
+   SuperscriptBox["s", "2"]]}]], "Output",
+ CellChangeTimes->{3.638889088523842*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   SuperscriptBox["E", 
+    RowBox[{
+     RowBox[{"-", "s"}], " ", "t"}]], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.638887442416232*^9, 3.6388874526132183`*^9}, {
+  3.638888685582199*^9, 3.638888697394617*^9}, {3.638889033011592*^9, 
+  3.638889034599938*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", "s"}], " ", "t"}]], "s"]}]], "Output",
+ CellChangeTimes->{3.638888698512179*^9, 3.6388890377795258`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "\t\t\tuv - ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    RowBox[{"v", 
+     RowBox[{"\[DifferentialD]", "u"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\t\t\tu = 1, du = 0, dv = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["e", 
+     RowBox[{"-", "st"}]], ","}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " v = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"-", 
+     SuperscriptBox["e", 
+      RowBox[{"-", "st"}]]}], "s"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6388883393287277`*^9, 3.6388883507391863`*^9}, {
+  3.638888384275222*^9, 3.6388884489734573`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"1", "-", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", "s"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "s"}], ")"}]}]}], 
+   SuperscriptBox["s", "2"]]],
+  CellChangeTimes->{3.638887322633052*^9},
+  FontSize->16],
+ "+ ",
+ Cell[BoxData[
+  FormBox[GridBox[{
+     {"lim"},
+     {
+      RowBox[{"b", "\[Rule]", "\[Infinity]"}]}
+    }], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  RowBox[{"-", 
+   FractionBox[
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "s"}], " ", "t"}]], "s"]}]],
+  CellChangeTimes->{3.638887453081953*^9},
+  FontSize->18],
+ StyleBox["|",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[GridBox[{
+     {"b"},
+     {"1"}
+    }], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  - 0\n\n",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"1", "-", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", "s"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "s"}], ")"}]}]}], 
+   SuperscriptBox["s", "2"]]],
+  CellChangeTimes->{3.638887322633052*^9},
+  FontSize->16],
+ " + ",
+ Cell[BoxData[
+  FormBox[GridBox[{
+     {"lim"},
+     {
+      RowBox[{"b", "\[Rule]", "\[Infinity]"}]}
+    }], TraditionalForm]]],
+ "[ ",
+ Cell[BoxData[
+  RowBox[{"-", 
+   FractionBox[
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "s"}], " ", "b"}]], "s"]}]],
+  CellChangeTimes->{3.638887453081953*^9},
+  FontSize->18],
+ "+ ",
+ Cell[BoxData[
+  FractionBox[
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"-", "s"}]], "s"]],
+  CellChangeTimes->{3.638887453081953*^9},
+  FontSize->18],
+ "]\nThe term: ",
+ Cell[BoxData[
+  RowBox[{"-", 
+   FractionBox[
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "s"}], " ", "b"}]], "s"]}]],
+  CellChangeTimes->{3.638887453081953*^9},
+  FontSize->18],
+ "goes to 0 as b -> \[Infinity]. The term: ",
+ Cell[BoxData[
+  FractionBox[
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"-", "s"}]], "s"]],
+  CellChangeTimes->{3.638887453081953*^9},
+  FontSize->18],
+ " does not have any b\[CloseCurlyQuote]s in it so it is not affected by the \
+limit. Therefore:\n\n\[ScriptCapitalL] { f(t) } = ",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{"1", "-", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", "s"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "s"}], ")"}]}]}], 
+   SuperscriptBox["s", "2"]]],
+  CellChangeTimes->{3.638887322633052*^9},
+  FontSize->16],
+ "+ ",
+ Cell[BoxData[
+  FractionBox[
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"-", "s"}]], "s"]],
+  CellChangeTimes->{3.638887453081953*^9},
+  FontSize->18]
+}], "Text",
+ CellChangeTimes->{{3.638887376433992*^9, 3.6388873821229486`*^9}, {
+  3.6388874121479273`*^9, 3.6388875022952833`*^9}, {3.638887559779159*^9, 
+  3.638887603822463*^9}, {3.638888305299354*^9, 3.6388883081914253`*^9}, {
+  3.638888461030731*^9, 3.638888475778387*^9}, {3.6388885780418653`*^9, 
+  3.6388886526017447`*^9}, {3.638889344974972*^9, 3.638889438423114*^9}}]
+}, Open  ]]
+},
+WindowSize->{684, 651},
+WindowMargins->{{-6, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 95, 1, 92, "Title"],
+Cell[678, 25, 1242, 34, 291, "Text"],
+Cell[CellGroupData[{
+Cell[1945, 63, 308, 9, 35, "Input"],
+Cell[2256, 74, 273, 9, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2566, 88, 251, 7, 35, "Input"],
+Cell[2820, 97, 323, 11, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3180, 113, 322, 8, 35, "Input"],
+Cell[3505, 123, 217, 6, 49, "Output"]
+}, Open  ]],
+Cell[3737, 132, 699, 25, 68, "Text"],
+Cell[4439, 159, 3061, 112, 206, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

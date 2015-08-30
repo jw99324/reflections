@@ -1,0 +1,1109 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     42378,       1100]
+NotebookOptionsPosition[     42081,       1085]
+NotebookOutlinePosition[     42438,       1101]
+CellTagsIndexPosition[     42395,       1098]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   StyleBox[
+    RowBox[{"Jesi", " ", "Weed"}], "Title"], "\[IndentingNewLine]", 
+   StyleBox["\[IndentingNewLine]", "Title"], "\[IndentingNewLine]", 
+   RowBox[{
+    StyleBox[
+     RowBox[{"Part", " ", "1"}], "Subsection"], ":", "\[IndentingNewLine]", 
+    StyleBox["\[IndentingNewLine]", "Title"], 
+    GraphicsBox[{{{}, 
+       GraphicsComplexBox[{{0., 1.}, {0.5, 3.5}, {1., 12.25}}, {{{}, {}, 
+          {RGBColor[1, 0, 0], PointSize[0.019444444444444445`], 
+           AbsoluteThickness[1.6], LineBox[{1, 2, 3}]}}, {
+          {RGBColor[1, 0, 0], PointSize[0.019444444444444445`], 
+           AbsoluteThickness[1.6], PointBox[{1, 2, 3}]}, {}, {}}}], {}}, {{}, 
+       GraphicsComplexBox[{{0., 1.}, {0.2, 2.}, {0.4, 4.}, {0.6, 8.}, {0.8, 
+        16.}, {1., 32.}}, {{{}, {}, 
+          {RGBColor[0, 1, 0], PointSize[0.019444444444444445`], 
+           AbsoluteThickness[1.6], LineBox[{1, 2, 3, 4, 5, 6}]}}, {
+          {RGBColor[0, 1, 0], PointSize[0.019444444444444445`], 
+           AbsoluteThickness[1.6], 
+           PointBox[{1, 2, 3, 4, 5, 6}]}, {}, {}}}], {}}, {{}, {}, 
+       {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], 
+        LineBox[CompressedData["
+1:eJwVxXk41HkcAOCJVY2RZ5JrSkQ6kJSjXak+HyFNcs24tmmt+WVsbZISrbZn
+t7IqN1EiuQa1pXF12CKKhw4a1zBJDOtKk++wTT2PyO7+8T6vMXWUI1Ch0Wju
+//n/PYLx9vp3vjsMNwevoNEUMCbyowZYtrA9t9CbvVABugxJchXLGUru6dMu
+ayhgo7128XWWD3S/THpuw1LA1jab8kusYPDg9JulWCug/lqDXRLrBBgpwr/U
+ChQQczbhl3jWHzDuEtGu8koBwScIK46VAYV6jkuokilYnMEuUEwVgXpywg1h
+wT/woM3a1dWwDAyVdcfTREoIiOnrbUi4C/dHfOnBo5/haEWE5dWPf8FPGx1c
+7FJnYDq1+9mCBXVQEQVqY15z8OxJU51421NoUNirFXnS8FA0e8n38kZwZgf/
+dm6lCj6hW8+XHmmG/C+RlOuMKpYIG78uX/MCwlv6p9u2LETUrS3kilqgx4Sv
+qnZhMVo291U3mYsh7sZBE8EiBnYhd/LPyTbIQmEle7Emhqof7pBs6gC3CYvu
+vWlMfCn1r9VM7oT4YEeea5gWcncFDA4Pd8Fxx0ZyJ0obt+Qn+OebdoMfc8w3
+J0UXZV/Tuw7+3gP3DewTedosHGGLhboNUjhTpaFNRCuwPGsgut24F2y9wppT
+xIZYfFE1zuzUG6jkX1FtMjBG5YF9EyGP+uBlqJbn/IAJMpzPcyr0+kF+7WK1
+bM4UTzNHNAb3D0DXq5Nr4jauQ43HFrQedxncHqXHfEg0w+1RnnMNMzKwctv6
+VF2wAXOKEoWrcwbBU0o3iPC1wkBf21a62xDI1utfSg7bjPckgvTHn4bgcup8
+cR7PBu1bylVGr/wNDt7j8jMBdrjKJUSZ7jwMszq2uVcefYt2tnZpd0eHwaxo
+0aFEm604MJ30XBg7AkP+hR6d/dtQbuMdy7IeBaPCyU3X6Ihr31tOLOgcBe2a
+B/G7Kxyx0TSyI/zsGJDSNbMskROmdEkOcEzHodWvIO9ujQsSbn2aSuM45K1e
+9ob65IqVvjpO9sfewc71vSnHCvegsDXm+pDWBDCi0qmLAnf83Lz/V62nE9Cr
+lh8ZwvNCWVqdkhn2HqbeNncNmnPwU7sD65ymHPItnrQE0n0wPMOkPrpGDjUv
+tslmXP1Qr9WEORz4Aaw5vIfB2QHIlZTOGnz9AKncEIXdSh5O/1gQ2ndrEgJu
+Lc1jGAdiXVBZrOZeAr/LzL125AXhQ3GoW78HActVWR5JJUF4f4f5UpE3ASuP
+8piBO0FYalCc4+5PQDx1JjOpJgizpdlViRQBt2wqidkbhJFe5wfVowlkmpGp
+Sh0+WuAP2xeVECgIz6uNSOHj2rLlqj03CYg0rfZtyOSjiaH0WcltAsN0KW88
+l4/6sxyfXRUEjuw5mvGziI8Lq3cfjq0hML7u5jdXW/k4aGWbpdpJoM9J3+aq
+BoV9uVOBnRICD5LFkgvaFEqXlJkKpQQCmtqVpwwofPXerHxnPwGn+t6qwxso
+rLlh1Hz2HYGP2kbck3sprNZ9m+gtJxDhymbE+FBYFZvNMSYEHOL13C/tp/DW
+AZ3++o8EdOpeRzwKpbC4o0OY+pkAtVbOk5ygMN8x9VDQDAFG3EDn9GkKc8rd
+rTbNEWC+dn67LJbCTCOGcn6eQGn1nejvkij8F9QEUoM=
+         "]]}}},
+     AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+     Axes->{True, True},
+     AxesLabel->{None, None},
+     AxesOrigin->{0, 0},
+     DisplayFunction->Identity,
+     Frame->{{False, False}, {False, False}},
+     FrameLabel->{{None, None}, {None, None}},
+     FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+     GridLines->{None, None},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     ImageSize->{394.09375, Automatic},
+     Method->{},
+     PlotRange->{{0, 1.2}, {0, 36}},
+     PlotRangeClipping->True,
+     PlotRangePadding->{{
+        Scaled[0.02], 
+        Scaled[0.02]}, {
+        Scaled[0.02], 
+        Scaled[0.05]}},
+     Ticks->{Automatic, Automatic}]}], "\[IndentingNewLine]", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"IVP", ":", " ", 
+      RowBox[{"dy", "/", "dt"}]}], " ", "=", " ", 
+     RowBox[{"5", "y"}]}], "Text"], "\[IndentingNewLine]", 
+   RowBox[{
+    StyleBox["Red", "Text",
+     FontFamily->"Helvetica",
+     FontSize->14,
+     FontWeight->"Plain",
+     FontColor->RGBColor[0., 0., 0.]], 
+    StyleBox[":", "Text",
+     FontFamily->"Helvetica",
+     FontSize->14,
+     FontWeight->"Plain",
+     FontColor->RGBColor[0., 0., 0.]], 
+    StyleBox[" ", "Text",
+     FontFamily->"Helvetica",
+     FontSize->14,
+     FontWeight->"Plain",
+     FontColor->RGBColor[0., 0., 0.]], 
+    StyleBox[
+     RowBox[{"Using", 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      RowBox[{
+       StyleBox[
+        RowBox[{
+         StyleBox["E", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], 
+         StyleBox[
+          StyleBox[
+           StyleBox["u", "Text",
+            FontFamily->"Helvetica",
+            FontSize->14,
+            FontWeight->"Plain",
+            FontColor->RGBColor[0., 0., 0.]], "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "le", 
+         StyleBox["r", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]]}]], 
+       StyleBox[
+        StyleBox["'", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]]}], 
+      StyleBox["s", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox["M", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "ethod"}]], " ", 
+      StyleBox[
+       RowBox[{"t", 
+        StyleBox["o", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]]}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["f", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "in", 
+        StyleBox["d", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]]}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       StyleBox[
+        StyleBox["a", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["n", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "um", 
+        StyleBox["b", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "er", 
+        StyleBox["i", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "ca", 
+        StyleBox["l", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]]}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["s", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "ol", 
+        StyleBox["u", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "ti", 
+        StyleBox["o", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[
+         StyleBox["n", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]]}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["t", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[
+         StyleBox["o", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]]}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["t", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "he"}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["I", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "VP"}]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      RowBox[{
+       StyleBox[
+        RowBox[{
+         StyleBox[
+          StyleBox[
+           StyleBox["o", "Text",
+            FontFamily->"Helvetica",
+            FontSize->14,
+            FontWeight->"Plain",
+            FontColor->RGBColor[0., 0., 0.]], "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], 
+         StyleBox[
+          StyleBox["n", "Text",
+           FontFamily->"Helvetica",
+           FontSize->14,
+           FontWeight->"Plain",
+           FontColor->RGBColor[0., 0., 0.]], "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]]}]], " ", "[", 
+       RowBox[{"0", ",", "1"}], "]"}], " ", 
+      StyleBox["with", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       StyleBox["a", "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[" ", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox["s", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], "tep"}]], " ", 
+      StyleBox["size", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], " ", 
+      RowBox[{".5", ".", 
+       StyleBox["\[IndentingNewLine]", "Text"], 
+       StyleBox["Blue", "Text"]}]}], "Text",
+     FontFamily->"Helvetica",
+     FontSize->14,
+     FontWeight->"Plain",
+     FontColor->RGBColor[0., 0., 0.]], 
+    StyleBox[":", "Text",
+     FontFamily->"Helvetica",
+     FontSize->14,
+     FontWeight->"Plain",
+     FontColor->RGBColor[0., 0., 0.]], 
+    RowBox[{
+     StyleBox["Using", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["Euler", "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], "'"}], "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["s", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["Method", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["to", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["find", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["a", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["numerical", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["solution", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["to", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["the", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["IVP", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["on", "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], 
+       StyleBox[" ", "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], "[", 
+       RowBox[{"0", ",", "1"}], "]"}], "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["with", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["a", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["step", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox["size", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[" ", "Text",
+      FontFamily->"Helvetica",
+      FontSize->14,
+      FontWeight->"Plain",
+      FontColor->RGBColor[0., 0., 0.]], 
+     RowBox[{
+      StyleBox[".1", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox[".", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      StyleBox["\[IndentingNewLine]", "Text",
+       FontFamily->"Helvetica",
+       FontSize->14,
+       FontWeight->"Plain",
+       FontColor->RGBColor[0., 0., 0.]], 
+      RowBox[{
+       StyleBox["Green", "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], 
+       StyleBox[":", "Text",
+        FontFamily->"Helvetica",
+        FontSize->14,
+        FontWeight->"Plain",
+        FontColor->RGBColor[0., 0., 0.]], 
+       RowBox[{
+        StyleBox["Finding", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["the", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["explicit", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["solultion", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["by", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["hand", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["and", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["with", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["DSolve", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["to", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox["the", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        StyleBox[" ", "Text",
+         FontFamily->"Helvetica",
+         FontSize->14,
+         FontWeight->"Plain",
+         FontColor->RGBColor[0., 0., 0.]], 
+        RowBox[{
+         StyleBox["IVP", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], 
+         StyleBox[".", "Text",
+          FontFamily->"Helvetica",
+          FontSize->14,
+          FontWeight->"Plain",
+          FontColor->RGBColor[0., 0., 0.]], "\[IndentingNewLine]", 
+         StyleBox["\[IndentingNewLine]", "Title"], "\[IndentingNewLine]", 
+         StyleBox["Part", "Subsection"]}], 
+        StyleBox[" ", "Subsection"], 
+        StyleBox["2", "Subsection"]}], 
+       StyleBox[":", "Subsection"], "\[IndentingNewLine]", 
+       GraphicsBox[{{{}, {{}, {}, 
+           {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+            0.01388888888888889], AbsoluteThickness[1.6], 
+            LineBox[CompressedData["
+1:eJxd0mlQU2cUBmBIAiGAbCEJEEI2y2ZkETFCmd7XBXCjZaoWR1SEgitKRaVT
+p9UyClpFFhfEDdpRQVuwU9Ta0gq4gKDihiBKqkxhVBCBVIoIGKvHzz89M3eS
+TL77nHvfc9QJKZ8m8czMzJLeXG8//1d4/2UJFQ8H9r+t37npjU28dqEF+13P
+/eEb1hfTIcT4oLfVyP0cd/jK+pfW7P97XMxFY9bMyXbMa+MKq3OqUlsdQMeD
+2rm2cP5GQbET3vV5xHFbXg/s/MoZdPv+Tm6ouUKhjZLiGlU3N1W876NkqQte
+U/Vys/b2mEz1ruy8kYu4fUtniJUz/zn3xHleh221Oxro/n5uRBRcPuepAkup
+3wD3heZX+65GD5jT8w1yLWXDZ7SpShwk7yXne7Y0z+q8EsHkDXPRzQW88kol
+bpA3wm2O27h5XbISy8kzcfGPZs6ov/7eM0OF+lj3ULcC1+m8GV6F3Z1feNOd
++eYoP9Ed+3iLHMtYzlNmyQKeStxYPz66t9uXdOS44N2MBPAx7u/cbpKy/gKI
+lqVZb0uW4BB5Fkh+mi+TtYvZ81giZL2w9epyJ0wgT4jjQVZH0y0dwSfPCk4r
+0uqaNtjjJnlWSC3zuJOqGYXD5InQ0jO3t9TSBivIs0bWwOKgcG8R9OTZoPXs
+PdmqTCEE5NnCoNuwBUpL3CLPFjb11v2BfQIUkjcKnQ0pRUkDfKwkzw5dMXZe
+w358TCTPHu0ZFr0R+3jsfR1Qvqpv9Ssdj+XjgBwLeeDsHnOWpwO8Iid/7Hzf
+nO2fIy4srTKd6TVn++cIiVy6MdGfx/bPCWeK1trbH+CxfXOCz3DpN2sD+Wy/
+nND478lXPoN8jCNPDM2Ti49/MQpQQJ4Y89ZlRW7SWMJE+yfGTz61tVa5QiSS
+54zPk+ue3YEIV8hzRsVpsUtGmA0CyJNgzw7vy607RiGfPAliZ+wqWOjugBHy
+JIia28q3LXFEAnlSnO/4subZSjHqyJOiuXxFbswaCfzIkyE9ffDbpnMy7CFP
+huidiUf6YtwwRJ4M/fpT6Q/DFVhMngs2HUw8lBOhQi15LvjBP6TvpYsGOvJc
+kRz1IHeZfDR2kecKcebtuLtRnhgkzxWnr+2NPH7SG4vIc0OYfOu9iNAxuESe
+G+62PT/X2DUWvuTJEf/ikJsxNgC55MlhWu13wudqIAbIk0Nrm50yNiwIC8hz
+R8CfPVMMxeNxgTx3yDOKP5PyJsCbPAX8W3hfS6bqkU2eAiNzD3T9nTAR/eQp
+ENxVY90+JwTzyfNAlHC74yrHUFST54FtdYX8+LxQeJKnxMkyiXPZjVBkkadE
+lbH5yKn6UPxDnhILekp/zNgUyvJRwfBbW1Pn8xDEka9Cs/56tp8uhOWlgmjo
+ftpV/4mooX6qN3O7dMwg1LP8VJg97eHozMpgjCFPje87E2TRi8azPNVoqxj4
+bodxHPLIUwOfVEc0pAeyfNUoiQvo3ioLwAvy1PDtfJK2e+37vDVYcuJo74cG
+XywkTwMrC61Bvsab5a9BQVJDSpreExfJ02BNu266bNxoNg8NQvKnpFTGa+BD
+nhYeXbqg3TUqNh8t9OlFKq+zHsghTwvRNMFl4yR3Ni8t7P56UCv/wA3/AYEM
+u/E=
+             "]]}}, {}}, {{}, {{}, {}, 
+           {RGBColor[1, 0, 0], PointSize[0.019444444444444445`], 
+            AbsoluteThickness[1.6], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQjQYcULk8UP4D+yzmlIMLVMSg/A/2MQ++rmJWkIPy
+f9ibTJ7WkjxDAabfwbnG490lDxkon8Xh4+/4BVFfhKB8DgfOEtOfL1XYHWD2
+LDvL3rnZD2a/gMOt1+f2L/ry1x7CF3KYsqkszCCNESov4jD96/mMd3dh+sUc
+/rBLBBZpwsyXcDjecGDZ5Icw+6Uc2p5bOr+oVYPyZRxytq6Pi/6hD+XLOcQz
+/ryT42gM5Ss4tOjdszwfZQTlKzqIKIaaPlyhBeUrOThZLVubzi4P5Ss7LJa4
+I/C+T9ABACOLTn8=
+             "]]}}, {}}, {{}, {}, 
+          {RGBColor[0, 1, 0], AbsoluteThickness[1.6], Opacity[1.], 
+           LineBox[CompressedData["
+1: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
+PwrMmiaemB8Vgv8B6GxUZQ==
+            "]]}}},
+        AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+        Axes->{True, True},
+        AxesLabel->{None, None},
+        AxesOrigin->{0, 0},
+        DisplayFunction->Identity,
+        Frame->{{False, False}, {False, False}},
+        FrameLabel->{{None, None}, {None, None}},
+        FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+        GridLines->{None, None},
+        GridLinesStyle->Directive[
+          GrayLevel[0.5, 0.4]],
+        ImageSize->{379.58984375, Automatic},
+        Method->{},
+        PlotRange->{{0, 9.89999999999998}, {0, 26.811234717648112`}},
+        PlotRangeClipping->True,
+        PlotRangePadding->{{
+           Scaled[0.02], 
+           Scaled[0.02]}, {
+           Scaled[0.02], 
+           Scaled[0.05]}},
+        Ticks->{Automatic, Automatic}]}]}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.634832986522654*^9, 3.634832987743294*^9}, {
+  3.634936932091322*^9, 3.634936993856371*^9}, {3.63493760994796*^9, 
+  3.634937788215392*^9}, {3.6349378252487087`*^9, 3.634937878771883*^9}, {
+  3.6349379286631117`*^9, 3.6349379866822357`*^9}}],
+
+Cell["\<\
+IVP: dy/dt = y cos(t) + 1
+Red: Using Euler\[CloseCurlyQuote]s Method to find a numerical solution on \
+[0,10] with a step size of .5.
+Blue: Using Euler\[CloseCurlyQuote]s Method to find a numerical solution on \
+[0,10] with a step size of .1.
+Green: Using NDSolve[] to find a numerical solution to the IVP.\
+\>", "Text",
+ CellChangeTimes->{{3.634937516069695*^9, 3.634937605679524*^9}, {
+  3.634937899325059*^9, 3.634937924586034*^9}}]
+},
+WindowSize->{808, 651},
+WindowMargins->{{-56, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 41071, 1052, 813, "Input"],
+Cell[41632, 1074, 445, 9, 87, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
