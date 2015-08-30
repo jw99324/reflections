@@ -171,3 +171,53 @@ git checkout 71d52709ddc4066e7a79a1d0a412e43429a0cdeb
 git diff 71d52709ddc4066e7a79a1d0a412e43429a0cdeb 547f4171a82ec6429d002c1acef357aec41d3f17
 git log
 git diff 746f762e38b5bbb7d0b837464ef6ec3f8ee5bf91 003c8c197cd3b1e5b28b58f53ee14d7ebaa9bb3a
+ls -a
+git init
+ls -a
+git log
+git status
+git init
+git status
+ls
+git add pappu-pakia
+git status
+git status
+git commit
+git commit -m "Commit message"
+git config --global user.name "Jesi Weed"
+git config --global user.email jweed@elon.edu
+git log
+git status
+ls
+cd /asteroids
+cd \asteroids
+cd ..
+cd \version-control
+ls
+git status
+git add ../.CFUserTextEncoding
+git add ../.DS_Store
+../.Trash/
+git add ../.Trash/
+fdsjfkdls;afjkdls;a
+\quit
+git add ../.bash_history
+git commit -m "this is dumb"
+git status
+git add ../pappu-pakia
+git add ../.bash_profile
+git add ../.cups/
+git add
+git add ../.dropbox/
+git add ../.gitconfig
+git commit -m "help me"
+git status
+git add ../.idlerc/
+git add ../.ssh/
+git add ../Applications/
+git add ../Desktop/
+git add ../Documents/
+ls
+cd \version-control
+git status
+git add ../Documents/
